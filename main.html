@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bangers&family=Caveat&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
-    <link rel="stylesheet" href="css/maincss.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Анкета петушка!</title>
 </head>
 
@@ -13,7 +13,7 @@
 <a class="button" href="https://www.instagram.com/alekseev_avksentiy/?hl=ru">INSTAGRAM</a>
 
 
-<h1 style="text-align: center;"> Анкета петушка! </h1>
+<h1 style="text-align: center;">Анкета петушка!</h1>
 <div class="content_g">
 
 </div>
@@ -23,49 +23,52 @@
     <form action="#" method="post" enctype="multipart/form-data"></form>
 </div>
 <div class="info">
-    <p><b>Кликуха</b></p>
-    <input tabindex="1" placeholder="username" type="text" name="Username" value="">
+    <p><label for="username"><b>Кликуха</b></label></p>
+    <input tabindex="1" placeholder="username" id="username" type="text" name="Username" value="">
 </div>
 
 <div class="info">
-    <p><b>Секрет</b></p>
-    <input tabindex="2" type="password" name="userpass" value="">
+    <p><label for="secret"><b>Секрет</b></label></p>
+    <input tabindex="2" type="password" id="secret" name="userpass" value="">
 </div>
 
 <div class="info">
-    <p><b>Мобила</b></p>
-    <input tabindex="3" type="tel" name="phone" value="+380">
+    <p><label for="mobile"><b>Мобила</b></label></p>
+    <input tabindex="3" type="tel" id="mobile" name="phone" value="+380">
 </div>
 
 <div class="info">
     <p><b>Пол</b></p>
     <div>
-        <input tabindex="4" type="radio" name="gender" value="mal">Мужик
+        <input tabindex="4" type="radio" id="gender_mal" name="gender" value="mal">
+        <label for="gender_mal">Мужик</label>
     </div>
-
     <div>
-        <input tabindex="4" type="radio" name="gender" value="famal">Баба
-
+        <input tabindex="4" type="radio" id="gender_famal" name="gender" value="famal">
+        <label for="gender_famal">Баба</label>
     </div>
 </div>
 <div class="info">
     <p><b>Шо есть ?</b></p>
     <div>
-        <input tabindex="5" type="checkbox" name="car" value="mashina">Брычка
+        <input tabindex="5" id="mashina" type="checkbox" name="car[]" value="mashina">
+        <label for="mashina">Брычка</label>
     </div>
 
     <div>
-        <input tabindex="6" type="checkbox" name="car" value="samik">Самокат
+        <input tabindex="6" id="samik" type="checkbox" name="car[]" value="samik">
+        <label for="samik">Самокат</label>
     </div>
 
     <div>
-        <input tabindex="7" type="checkbox" name="car" value="peshka">Ноги
+        <input tabindex="7" id="peshka" type="checkbox" name="car" value="peshka">
+        <label for="peshka">Ноги</label>
     </div>
 </div>
 
 <div class="info">
-    <p><b>Кто ты по масти?</b></p>
-    <textarea tabindex="8" cols="30"></textarea>
+    <p><label for="mast"><b>Кто ты по масти?</b></label></p>
+    <textarea tabindex="8" cols="30" id="mast"></textarea>
 </div>
 
 <div class="info">
@@ -74,8 +77,8 @@
 </div>
 
 <div class="info">
-    <p><b>Выбири цвэт</b></p>
-    <select tabindex="10" name="color">
+    <p><label for="color"><b>Выбири цвэт</b></label></p>
+    <select tabindex="10" name="color" id="color">
         <option value="red">Червоній</option>
         <option value="blue">Голубой(как ты)</option>
         <option value="white">Белій</option>
